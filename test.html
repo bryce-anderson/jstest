@@ -1,0 +1,29 @@
+<html>
+<head>
+
+<script>
+var f= function() {
+  var xmlHttp = new XMLHttpRequest();
+  //var theUrl = "test.txt";
+  var theUrl = "https://raw.githubusercontent.com/bryce-anderson/jstest/master/LICENSE";
+  xmlHttp.open("GET", theUrl, false);
+  xmlHttp.send(null);
+  
+  var textLines = xmlHttp.responseText.split('\n');
+  
+  for (var i=0; i < textLines.length; i++) {
+    console.log('line ' + i + ': ' + textLines[i]);
+  }
+};
+
+window.onload = f;
+</script>
+</head>
+<body>
+Hello.
+<div id="foo"></div>
+
+This is below the div.
+
+</body>
+</html>
