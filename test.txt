@@ -1,2 +1,11 @@
 This is a test line
 This is a second test line
+
+   /// code_ref: the_ref
+   case class Foo(foo: Int, bar: String) {
+     // Some comments
+     def go() = foo
+   }
+   /// end_code_ref
+
+This is after the code ref

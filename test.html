@@ -1,27 +1,18 @@
 <html>
 <head>
-
-<script>
-var f= function() {
-  var xmlHttp = new XMLHttpRequest();
-  //var theUrl = "test.txt";
-  var theUrl = "https://raw.githubusercontent.com/bryce-anderson/jstest/master/LICENSE";
-  xmlHttp.open("GET", theUrl, false);
-  xmlHttp.send(null);
-  
-  var textLines = xmlHttp.responseText.split('\n');
-  
-  for (var i=0; i < textLines.length; i++) {
-    console.log('line ' + i + ': ' + textLines[i]);
-  }
-};
-
-window.onload = f;
-</script>
+  <link href="prism.css" rel="stylesheet" />
+  <script src="prism.js" data-manual></script>
+  <script src="codeRefExtractor.js"></script>
+  <script>
+    window.onload = function() {
+      //var theUrl = "https://raw.githubusercontent.com/bryce-anderson/jstest/master/LICENSE";
+      injectCodeRef('code-ref', 'the_ref', 'test.txt');
+    };
+  </script>
 </head>
 <body>
 Hello.
-<div id="foo"></div>
+<pre id="code-ref"></pre>
 
 This is below the div.
 
