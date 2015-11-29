@@ -3,7 +3,7 @@ This is a second test line
 
    /// code_ref: the_ref
    case class Foo(foo: Int, bar: String) {
-     // Some comments
+     // Some comments have been edited
      def go() = foo
    }
    /// end_code_ref
