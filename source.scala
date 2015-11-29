@@ -2,7 +2,7 @@
 object Main {
 
   /// src_inlined main
-  // commit 9
+  // commit 10
   case class Foo(name: String) {
     override def toString = name
   }
